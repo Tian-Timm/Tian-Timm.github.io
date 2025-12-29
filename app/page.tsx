@@ -1,0 +1,31 @@
+import type { Metadata } from "next"
+import Hero from "@/components/hero"
+import About from "@/components/about"
+import TechStack from "@/components/tech-stack"
+import Projects from "@/components/projects"
+import Testimonials from "@/components/testimonials"
+import Contact from "@/components/contact"
+import Footer from "@/components/footer"
+import Navbar from "@/components/navbar"
+
+export const metadata: Metadata = {
+  title: "Yuntian Hou (Max) | Creator & Builder",
+  description: "Portfolio of Yuntian Hou (Max) - Creator, Product-minded Builder, and Vibe Coder",
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <TechStack />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  )
+}
