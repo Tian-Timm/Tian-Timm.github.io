@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, StarHalf } from "lucide-react"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Testimonials() {
   const fadeIn = {
@@ -15,65 +15,47 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      position: "Product Manager at TechCorp",
+      name: "Dr. L. Chen",
+      position: "Professor of History @ Peking University",
       content:
-        "Working with MemoryLeaked was an absolute pleasure. They delivered our project on time and exceeded our expectations in terms of quality and functionality. Their attention to detail and problem-solving skills are exceptional.",
-      rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+        "Yuntian stands out for his remarkable ability to bridge the gap between humanities and data science. His work on the Tang Dynasty Poets visualization project demonstrated not only meticulous historical research but also a sophisticated grasp of NLP and data visualization. He is a truly interdisciplinary scholar who thinks beyond traditional boundaries.",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      position: "CTO at StartupX",
+      name: "James R.",
+      position: "Senior Product Strategy Lead @ Microsoft",
       content:
-        "MemoryLeaked helped us rebuild our entire platform from the ground up. Their technical expertise and ability to understand our business needs resulted in a product that has significantly improved our user engagement and conversion rates.",
-      rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+        "During his internship at STCA, Yuntian impressed the team with his sharp market intuition and structured thinking. His deep-dive reports on AI-native IDEs provided actionable insights for our product roadmap. He possesses the rare combination of strategic vision and the technical skill to execute complex data analytics.",
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      position: "Founder of DesignHub",
+      name: "Yuki Tanaka",
+      position: "CS Student @ Aoyama Gakuin University",
       content:
-        "I was impressed by MemoryLeaked's ability to translate our design vision into a fully functional website. They were responsive, professional, and provided valuable suggestions that improved the overall user experience.",
-      rating: 4.5,
-      image: "/placeholder.svg?height=100&width=100",
+        "I had the pleasure of collaborating with Max during our exchange program in Japan. He is a reliable teammate who naturally takes the lead in solving technical bottlenecks. His passion for AI is contagious, and he always goes the extra mile to ensure the team's project—like our risk prediction model—is both technically sound and well-presented.",
     },
     {
       id: 4,
-      name: "David Kim",
-      position: "Marketing Director at GrowthCo",
+      name: "Jason L.",
+      position: "AI Tech Content Creator & Developer",
       content:
-        "MemoryLeaked developed a custom analytics dashboard for our marketing team that has transformed how we track and optimize our campaigns. Their solution was elegant, intuitive, and exactly what we needed.",
-      rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+        "Max has a unique gift for demystifying complex LLM architectures for a broader audience. Having seen him grow his AI community from scratch, I’m inspired by his commitment to knowledge sharing. He doesn’t just build tools; he builds pedagogical pathways that help thousands of people understand the future of AI-native coding.",
     },
     {
       id: 5,
-      name: "Lisa Patel",
-      position: "E-commerce Manager at RetailPlus",
+      name: "Sarah Miller",
+      position: "PhD Applicant @ Computational Social Science",
       content:
-        "The e-commerce platform developed by MemoryLeaked has been a game-changer for our business. It's fast, secure, and our customers love the seamless shopping experience. We've seen a 40% increase in online sales since launch.",
-      rating: 4.5,
-      image: "/placeholder.svg?height=100&width=100",
+        "ScholarScout has been a game-changer for my PhD application process. The AI-powered verification tool Max developed saved me dozens of hours by automating the tedious process of faculty research. It’s rare to find a student-led project that solves such a specific, real-world pain point with this level of precision and automation.",
     },
   ]
 
-  const renderStars = (rating) => {
-    const stars = []
-    const fullStars = Math.floor(rating)
-    const hasHalfStar = rating % 1 !== 0
-
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="h-5 w-5 fill-primary text-primary" />)
+  const getInitials = (name: string) => {
+    const parts = name.split(" ")
+    if (parts.length >= 2) {
+      return `${parts[0][0]}${parts[parts.length - 1][0]}`
     }
-
-    if (hasHalfStar) {
-      stars.push(<StarHalf key="half" className="h-5 w-5 fill-primary text-primary" />)
-    }
-
-    return <div className="flex">{stars}</div>
+    return name.substring(0, 2).toUpperCase()
   }
 
   return (
@@ -88,9 +70,9 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
-            Testimonials
+            Endorsements
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Satisfaction</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">What People Say</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -108,20 +90,16 @@ export default function Testimonials() {
                   <Card className="h-full">
                     <CardContent className="p-6 flex flex-col h-full">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden">
-                          <img
-                            src={testimonial.image || "/placeholder.svg"}
-                            alt={testimonial.name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <Avatar className="w-12 h-12">
+                          <AvatarImage src="" alt={testimonial.name} />
+                          <AvatarFallback>{getInitials(testimonial.name)}</AvatarFallback>
+                        </Avatar>
                         <div>
                           <h4 className="font-semibold">{testimonial.name}</h4>
                           <p className="text-sm text-muted-foreground">{testimonial.position}</p>
                         </div>
                       </div>
                       <p className="text-muted-foreground flex-grow mb-4">"{testimonial.content}"</p>
-                      <div className="mt-auto">{renderStars(testimonial.rating)}</div>
                     </CardContent>
                   </Card>
                 </CarouselItem>
@@ -137,3 +115,4 @@ export default function Testimonials() {
     </section>
   )
 }
+
