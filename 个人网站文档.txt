@@ -1,0 +1,74 @@
+📂 图片文件准备清单 (请重命名并放入 public 文件夹)
+为了最佳效果，请确保图片清晰，尺寸仅为参考建议。
+1.  hero-poster.jpg (1920x1080) - 首页视频加载前的封面图（防止视频加载慢时黑屏）。
+2.  project-1-doc.jpg (16:9) - 作品集第一张：纪录片/视频类封面。
+3.  project-2-map.jpg (21:9 或宽幅) - 作品集第二张：数据地图/核心项目封面。
+4.  project-3-photo.jpg (3:4 竖幅) - 作品集第三张：摄影作品封面。
+5.  tool-1.png (16:9) - 开源工具 1 (左上) 缩略图。
+6.  tool-2.gif (16:9) - 开源工具 2 (右上) 缩略图。
+7.  tool-3.png (16:9) - 开源工具 3 (左下) 缩略图。
+8.  tool-4.png (16:9) - 开源工具 4 (右下) 缩略图。
+9.  about-profile.jpg (4:5 竖幅) - 关于我页面：个人照片 (如已放置请忽略)。
+---
+📝 网站内容填写表
+➤ 1. 导航栏与首屏 (Hero Section)
+*   导航栏左侧名字: Yuntian Hou
+*   首屏大标题 (你的名字): Yuntian Hou
+*   职业/身份定位 (一句话): Digital Media Researcher & Designer
+*   关键词高亮:
+    *   关键词 A: 例如: Lens
+    *   关键词 B: 例如: Code
+    *   (这句话完整是: Exploring the intersection of A and B)
+➤ 2. 作品集区域 (Work Section - Bento Grid)
+卡片 1：左上角 (视频/纪录片)
+*   项目标题: Walking the Beijing Commute
+*   标签 1: Embodied Documentary
+*   标签 2: Urban Inquiry
+卡片 2：右上角 (理念/格言)
+*   短句 (Quote): 例如: "Exploring history through the lens of data and cinema."
+卡片 3：中间宽幅 (核心项目)
+*   项目标题: 例如: PKU Affective Map
+*   副标题: 例如: A Participatory Mapping System of Lived Campus Experience
+*   标签 1: 例如: Participatory Mapping
+*   标签 2: 例如: Civic Media
+*   标签 3: 例如: Data Systems
+卡片 4：左下角 (摄影)
+*   项目标题: Tokyo Street Photography
+*   类别: Visual Research
+卡片 5：右下角 (开源工具集 2x2)
+(注：如果某个项目不想展示，请填“无”)
+*   工具 1 (左上)
+    *   标题: ScholarScout
+    *   描述: Academic Crawler
+    *   链接: https://github.com/Tian-Timm/ScholarScout
+*   工具 2 (右上)
+    *   标题: Entropy Mirror
+    *   描述: p5.js Visualization
+    *   链接:  https://github.com/Tian-Timm/Entropy-Mirror
+*   工具 3 (左下)
+    *   标题: Heart Disease Data Mining
+    *   描述: Python Analysis
+    *   链接:  https://github.com/Tian-Timm/Heart-Disease-Risk-Analysis-Data-Mining
+*   工具 4 (右下)
+    *   标题: The Bias Detective 
+    *   描述: LLM App
+    *   链接: https://github.com/Tian-Timm/The-Bias-Detective
+➤ 3. 关于我与简历 (About & Resume)
+*   个人简介 (Bio):
+    *   段落 1:  I am a fourth-year undergraduate student at Peking University working with digital media to study how systems shape everyday experience. My work focuses on cities, data, and participation, especially where official representations fail to capture how places are actually lived and remembered.
+    *   段落 2:  My background in historical and archival research has shaped how I approach media and technology. Rather than treating data or interfaces as neutral tools, I see them as products of institutional choices, priorities, and constraints. This perspective informs my interest in building media systems that make those structures visible and open to participation.
+    *   段落 3:  Across projects, I use methods such as participatory mapping, embodied observation, and visual research to explore how local knowledge can be recorded and shared. I am interested in digital media not only as a form of expression, but as a way to design infrastructures that people can engage with and reshape.
+*   地理位置: Based in Beijing
+*   悬浮数据块 (照片右下角):数据块整个图标删除
+    
+*   核心技能 (Skills): 请列出 6-8 个，用逗号分隔
+*   工作经历 (Experience):
+    1.  职位: Strategic Analysis Intern  / 公司:Microsoft– Developer Division (STCA)   / 时间:  Nov 2025– Feb 2025
+    2.  职位: Consulting Project Intern  / 公司: Deloitte China– Technology & Transformation  / 时间:  Aug 2025– Nov 2025
+*   社交链接 (Social Links):
+    *   GitHub:  https://github.com/Tian-Timm
+    *   LinkedIn:  https://www.linkedin.com/in/max-hou-239a97381/
+    *   Twitter (X):  https://x.com/Davidgoggins666
+    *   YouTube:  https://www.youtube.com/@maxhou2061
+*   联系邮箱: hyt206157@gmail.com
+*   页脚版权名: © 2026 Yuntian Hou
